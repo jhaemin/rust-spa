@@ -11,7 +11,7 @@ use seed::{prelude::*, *};
 
 // `init` describes what should happen when your app started.
 fn init(_: Url, _: &mut impl Orders<Msg>) -> Model {
-    Model { counter: 0 }
+    Model { counter: 10 }
 }
 
 // ------ ------
