@@ -51,7 +51,7 @@ fn update(msg: Msg, model: &mut Model, _: &mut impl Orders<Msg>) {
 fn view(model: &Model) -> Node<Msg> {
     div![
         C!["counter"],
-        style! {St::Display => "flex"},
+        style! {St::Display => "flex", St::AlignItems => "center"},
         "This is a counter: ",
         button!["-", ev(Ev::Click, |_| Msg::Decrement),],
         div![model.counter,],
