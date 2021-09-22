@@ -39,7 +39,11 @@ enum Msg {
 fn update(msg: Msg, model: &mut Model, _: &mut impl Orders<Msg>) {
     match msg {
         Msg::Increment => model.counter += 1,
-        Msg::Decrement => model.counter -= 1,
+        Msg::Decrement => {
+            if model.counter >= 1 {
+                model.counter -= 1
+            }
+        }
     }
 }
 
